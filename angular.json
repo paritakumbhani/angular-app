@@ -20,6 +20,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "angularfire2",
+              "angularfire2/auth"
+            ],
             "outputPath": "dist/MyPhotoApplication",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -101,6 +105,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

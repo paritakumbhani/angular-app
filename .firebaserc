@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myphotoapplication-4f696": {
+      "hosting": {
+        "MyPhotoApplication": [
+          "myphotoapplication-4f696"
+        ]
+      }
+    }
+  }
+}
