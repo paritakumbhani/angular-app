@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-   
+  
   }
 
 
@@ -32,8 +32,14 @@ makeSignUpFormVisible(){
 
 login(){
   console.log("user tried to login");
+  this.userService.login(this.email,this.password);
+  this.email = "";
+  this.password = "";
 }
 signup(){
   console.log("user tried to sign up");
+  this.userService.signup(this.email,this.password);
+  this.email = "";
+  this.password = "";
 }
 }

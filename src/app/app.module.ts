@@ -12,10 +12,11 @@ import { UploadPictureComponent } from './upload-picture/upload-picture.componen
 import { PhotoDetailsComponent } from './photo-details/photo-details.component';
 import { RecentAlbumComponent } from './recent-album/recent-album.component';
 
-import { AngularFireModule } from 'angularfire2';
+
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { UserService } from './user.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserService } from './user.service';
     FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFirestoreModule
+    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
