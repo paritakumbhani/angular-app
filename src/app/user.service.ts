@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth'
-​
 import {Observable} from 'rxjs';
 import {User} from '@firebase/auth-types';
 
@@ -41,9 +40,9 @@ export class UserService {
         });
     }
   ​
-    logout() {
-      this.firebaseAuth
-        .signOut();
+    SignOut() {
+     
+      this.firebaseAuth.signOut();
     }
 
 }
