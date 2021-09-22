@@ -17,7 +17,12 @@
         <a class="nav-link" [routerLink]="['/albums/me']">Albums</a>
       </li>
     </ul>
-    
+    <h6 *ngIf="userService && userService.user | async">Hello {{ (userService.user | async)?.email }}</h6>
+<div *ngIf="(userService.user | async)">
+    <div class="float-right" style="padding-right: 30px; padding-top: px;" *ngIf="userService.user | async">
+      <a  class="btn btn-danger" (click)="signOut()">Logout</a>
+      </div>
+  </div>
   </div>
 </nav>
 

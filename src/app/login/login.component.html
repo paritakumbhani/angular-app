@@ -9,8 +9,7 @@
     </li>
   </ul>
 
-  <h1 *ngIf="userService && userService.user | async">Hello {{ (userService.user | async)?.email }}</h1>
-  <div *ngIf="!(userService.user | async)">
+
     <div class="form-group" >
      <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" [(ngModel)]="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -26,10 +25,8 @@
     </div>
     <button type="submit" class="btn btn-primary" (click)="login()"> Sign In</button>
 </div>
-<button (click)="signOut()" class="btn btn-primary" *ngIf="userService.user | async">Logout</button>
 
-  
-</div>
+
 
 <ng-template #signUpForm>
     <div style="width: 400px; margin: auto; padding-top: 100px;">

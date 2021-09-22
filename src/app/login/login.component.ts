@@ -6,7 +6,7 @@ import { UserService } from '../user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
  
  
   signInFormVisible = true;
@@ -15,9 +15,12 @@ export class LoginComponent {
   password: string;
 
 
-  constructor(public userService: UserService) { }
+  constructor(private userService: UserService) { }
 
+  ngOnInit(): void {
   
+  }
+
 
 makeSignInFormVisible(){
   this.signInFormVisible = true;
@@ -41,9 +44,6 @@ signup(){
 }
 
 
-signOut() {
-  this.userService.SignOut();
-}
 
 
 }

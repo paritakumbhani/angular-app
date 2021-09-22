@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MyPhotoApplication';
   
+
+  constructor(public userService: UserService) { }
+  signOut() {
+    this.userService.SignOut();
+  }
 }
